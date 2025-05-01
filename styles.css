@@ -1,0 +1,161 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.app-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: auto;
+}
+
+/* Center title absolutely */
+.app-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Chat Window */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.output {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Mic Button Section */
+.app-footer-controls {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebedf1;
+}
+
+.mic-button {
+  width: 100px;
+  height: 100px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(243, 241, 241, 0.2);
+}
+
+.mic-button.recording {
+  background-color: #dc3545;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 20px rgba(220, 53, 69, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.mic-icon svg {
+  pointer-events: none;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 10px;
+  color: #ddd;
+  background: #1e293b;
+  border-top: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 1.1rem;
+  }
+
+  .output {
+    font-size: 1rem;
+  }
+
+  .mic-button {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Copy Button */
+.copy-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Ensures background matches the overall body */
+  margin-top: 0; /* Remove any extra spacing from the top */
+}
+
+.copy-btn {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  background-color: #1e293b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #0f172a;
+}

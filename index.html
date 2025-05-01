@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Assistant - Dext</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="brand">Dext</div>
+      <h1 class="app-title">Voice Assistant</h1>
+    </header>
+
+    <!-- Copy Button -->
+    <div class="copy-container">
+      <button id="copyBtn" class="copy-btn">📋 Copy</button>
+    </div>
+
+    <main class="chat-window" id="chatBox">
+      <div class="output" id="output">Tap the mic and start speaking...</div>
+    </main>
+
+    <footer class="app-footer-controls">
+      <div id="micButton" class="mic-button">
+        <div class="mic-icon">
+          <svg viewBox="0 0 24 24" fill="white" width="40" height="40">
+            <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zm-5 8a8 8 0 0 0 8-8h-2a6 6 0 0 1-12 0H4a8 8 0 0 0 8 8zm-1 2h2v-2h-2v2z"/>
+          </svg>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="site-footer">
+      All rights reserved by Dext © <span id="year"></span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
